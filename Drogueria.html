@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Drogueria.css" />
+    <script  src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap-grid.min.css" />
+    <style type="text/css">
+
+        @media (min-width: 768px) {
+            .container {
+              padding-left: 10vh;
+            }
+        }
+
+          @media (min-width: 1024px) {
+            .container {
+              padding-left: 20vh;
+            }
+        }
+
+        html, body {
+            height: 100%;
+          }
+          
+          body {
+            display: grid;
+            font-family: Avenir, sans-serif;
+            color: #111;
+          }
+          
+          a {
+            text-decoration: none;
+            color: inherit;
+          }
+          
+          .cta {
+            position: relative;
+            margin: auto;
+            padding: 19px 22px;
+            transition: all 0.2s ease;
+          }
+          .cta:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            border-radius: 28px;
+            background: #6ed7ec;
+            width: 56px;
+            height: 56px;
+            transition: all 0.3s ease;
+          }
+          .cta span {
+            position: relative;
+            font-size: 16px;
+            line-height: 18px;
+            font-weight: 900;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            vertical-align: middle;
+          }
+          .cta svg {
+            position: relative;
+            top: 0;
+            margin-left: 10px;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke: #111;
+            stroke-width: 2;
+            transform: translateX(-5px);
+            transition: all 0.3s ease;
+          }
+          .cta:hover:before {
+            width: 100%;
+            background: #0dcaf0;
+          }
+          .cta:hover svg {
+            transform: translateX(0);
+          }
+          .cta:active {
+            transform: scale(0.96);
+          }
+
+
+        .navbar {
+            justify-content: flex-end;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            
+        }
+
+        .padd {
+            align-items: center ;
+        }
+
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            height: 90vh;
+            margin: 0%;
+        }
+        .container_produc{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            height: 200vh;
+            margin: 0%;
+            padding: 5%;
+        }
+
+        #info{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            height: 50%;
+        }
+
+        .p-3 {
+            width: 350px;
+            padding: 0px;
+        }
+
+        .footer{
+            height: 30vh;
+            display: flex;
+            text-align: end;
+            align-items: flex-end;
+        }
+
+    </style>
+    <title>Economed Fharma</title>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="container-h">
+
+            <div class="border-bottom border-1 border-info d-flex justify-content-between">
+
+                    <nav class="navbar navbar-expand">
+
+                    <div class="me-auto p-2">
+
+                                <img class="p-3 rounded-5  " src="img-dro.png" alt="Logo" >
+
+                    </div>
+
+
+                        <div class="" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                              <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Productos</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Pedidos</a>
+                              </li>
+                              <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Categorias
+                                </a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Gripe</a></li>
+                                  <li><a class="dropdown-item" href="#">Bebe</a></li>
+                                  <li><hr class="dropdown-divider"></li>
+                                  <li><a class="dropdown-item" href="#">Todas</a></li>
+                                </ul>
+                              </li>
+                        <div/>
+
+                        
+                            <div class="col container-fluid">
+                                <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
+                                <button class="btn btn-outline-info" type="submit">Buscar </button>
+                                </form>
+                            </div>  
+                    </nav>
+
+            </div>            
+
+
+        </div>
+
+    <header/>
+
+<div class="border-bottom border-info border-4 border-success p-2 mb-2 border-opacity-25">
+
+                    <header class="header header-light bg-blue">
+                        
+                        <div class="container">
+                            <p class="navbar navbar-light bg-light">Drogueria Economed Fharma</p>
+
+                        </div>
+                    </header>
+
+                </div>
+</div>
+
+
+
+    <section id="info">
+        <div class="container_produc">
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                      <img src="..." class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="..." class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="..." class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="..." class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="..." class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="..." class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+        <a href="#" class="cta">
+            <span>Click me</span>
+            <svg width="13px" height="10px" viewBox="0 0 13 10">
+              <path d="M1,5 L11,5"></path>
+              <polyline points="8 1 12 5 8 9"></polyline>
+            </svg>
+        </a>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <p>&copy; Drogueria Economed Fharma 2022</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
