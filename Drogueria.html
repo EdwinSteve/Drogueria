@@ -5,32 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="Drogueria.css" />
-    <script  src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <style type="text/css">
-
-        @media (min-width: 768px) {
-            .container {
-              padding-left: 10vh;
-            }
-        }
-
-          @media (min-width: 1024px) {
-            .container {
-              padding-left: 20vh;
-            }
-        }
-
-        html, body {
-            height: 100%;
-          }
-          
-          body {
-            display: grid;
-            font-family: Avenir, sans-serif;
-            color: #111;
-          }
           
           a {
             text-decoration: none;
@@ -89,57 +70,233 @@
 
 
         .navbar {
-            justify-content: flex-end;
             width: 100%;
-            display: flex;
-            justify-content: space-around;
+            justify-content: center;
+            padding-right: 2.5vw;
             
-        }
-
-        .padd {
-            align-items: center ;
         }
 
         .container{
             display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            flex-direction: column;
             height: 90vh;
-            margin: 0%;
         }
         .container_produc{
             display: flex;
             align-items: center;
-            justify-content: center;
             text-align: center;
-            flex-direction: column;
-            height: 200vh;
-            margin: 0%;
-            padding: 5%;
+            height: 90vh;
+            padding: 3vw;
+            position: relative;
         }
 
-        #info{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            flex-direction: column;
-            height: 50%;
+        .img {
+            width: 25vw;
         }
 
-        .p-3 {
-            width: 350px;
-            padding: 0px;
+        .carousel {
+          width: 92vw;
+          position: absolute;
         }
 
-        .footer{
-            height: 30vh;
-            display: flex;
-            text-align: end;
-            align-items: flex-end;
+        .carousel-control-prev, .carousel-control-next{
+          background-color: #6ed7ec;
+          width: 6vh;
+          height: 6vh;
+          border-radius: 50%;
+          top: 50%;
+
         }
+
+        .carousel-control-prev span, .carousel-control-next span {
+
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+
+        @media screen and (min-width: 568px) {
+
+        .card {
+          margin: 0 .5em;
+          width: calc(100%/3);
+        }
+
+        .cards-wrapper{
+          display: flex;
+          width: 100%;
+        }
+
+        .image-wrapper{
+          height: 22vw;
+          margin: 0 auto;
+          /*display: flex;
+          align-items: center;
+          justify-content: center;*/
+        }
+
+      }
+
+
+
+        @media screen and (max-width: 567px) {
+
+          .img {
+            width: 150px;
+        }
+
+          .card:not(:first-child){
+            display: none;
+          }
+
+          .card{
+            width: 85vw;
+          }
+
+        }
+
+        .Comprar{
+          height: 40vh;
+        }
+
+        .image-wrapper img{
+          max-width: 100%;
+          max-height: 100%;
+        }
+
+
+        .click{
+          padding-top: 10%;
+          display: flex;
+          height: 10vw;
+          width: 100vw;
+        }
+
+/* CSS */
+.ubicacion {
+  background-color: #3DD1E7;
+  border: 0 solid #E5E7EB;
+  box-sizing: border-box;
+  color: #000000;
+  display: flex;
+  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: .75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 100%;
+  max-width: 460px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.ubicacion:focus {
+  outline: 0;
+}
+
+.ubicacion:after {
+  content: '';
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.ubicacion:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+@media (min-width: 768px) {
+  .button-53 {
+    padding: .75rem 3rem;
+    font-size: 1.25rem;
+  }
+}
+
+
+.pie-pagina{
+  width: 100%;
+}
+
+.pie-pagina .grupo-1 {
+
+  padding-left: 5vw;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+  padding: 5vw;
+}
+
+.pie-pagina .grupo-1 .box1 a{
+  width: 250px;
+}
+
+.grupo-2 {
+  background-color: #4e9ead;
+}
+
+@media screen and (max-width: 800px){
+  
+  .pie-pagina .grupo-1 {
+
+    padding-left: 5vw;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 5vw;
+  }
+
+}
+
+.box {
+  float:right;
+}
+
+.box2 a{
+
+  text-decoration: none;
+  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background: #6ed7ec;
+  color: #f1f1f1;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+  transition: all .4s ease-in-out;
+
+  }
+
+  .box a:hover {
+    transform: scale(1.2);
+  }
+
+  .pie-pagina .grupo-2{
+     padding: 15px 10px;
+     text-align: center;
+  }
+
+  .wrapper_button{
+    padding-bottom: 5%;
+  }
+
+  .wrapper_siguenos{
+    float:right;
+  }
 
     </style>
     <title>Economed Fharma</title>
@@ -153,11 +310,11 @@
 
             <div class="border-bottom border-1 border-info d-flex justify-content-between">
 
-                    <nav class="navbar navbar-expand">
+                    <nav class="navbar navbar-expand-lg">
 
                     <div class="me-auto p-2">
 
-                                <img class="p-3 rounded-5  " src="img-dro.png" alt="Logo" >
+                                <img class="img p-2 rounded-5  " src="img-dro.png" alt="Logo" >
 
                     </div>
 
@@ -165,13 +322,16 @@
                         <div class="" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                               <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <a class="nav-link active" aria-current="page" href="#home">Home</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="#">Productos</a>
+                                <a class="nav-link" href="#product">Productos</a>
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link" href="#">Pedidos</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#footer">Contactanos</a>
                               </li>
                               <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -185,14 +345,11 @@
                                 </ul>
                               </li>
                         <div/>
-
-                        
-                            <div class="col container-fluid">
                                 <form class="d-flex" role="search">
                                 <input class="form-control me-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
                                 <button class="btn btn-outline-info" type="submit">Buscar </button>
                                 </form>
-                            </div>  
+
                     </nav>
 
             </div>            
@@ -206,7 +363,7 @@
 
                     <header class="header header-light bg-blue">
                         
-                        <div class="container">
+                        <div class="container" id="home">
                             <p class="navbar navbar-light bg-light">Drogueria Economed Fharma</p>
 
                         </div>
@@ -217,110 +374,191 @@
 
 
 
-    <section id="info">
-        <div class="container_produc">
+    <section id="product">
+        
+      <div class="container_produc">
 
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                  <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
+        <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="cards-wrapper">
+                <div class="card">
+                  <div class="image-wrapper">
+                    <img src="Alka-Seltzer.png" class="card-img-top" alt="...">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title fs-4">Alka-Seltzer</h5>
+                    <p class="card-text">X14 tabletas</p>
+                    <a href="#" class="btn btn-info">Comprar</a>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                    </div>
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="Bonfiest.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 class="card-title fs-4">Bonfiest Plus</h5>
+                    <p class="card-text">X6 sobres</p>
+                    <a href="#" class="btn btn-info">Comprar</a>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    </div>
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="calcin_forte.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 class="card-title fs-4">Calcin forte</h5>
+                    <p class="card-text">X30 tabletas</p>
+                    <a href="#" class="btn btn-info">Comprar</a>
                   </div>
                 </div>
-                <div class="col">
-                    <div class="card h-100">
-                      <img src="..." class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card h-100">
-                      <img src="..." class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card h-100">
-                      <img src="..." class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card h-100">
-                      <img src="..." class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card h-100">
-                      <img src="..." class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card h-100">
-                      <img src="..." class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      </div>
-                    </div>
-                  </div>
+
+              </div>         
             </div>
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="calcio.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 class="card-title fs-4">Card title</h5>
+                    <p class="card-text">X6 sobres</p>
+                    <a href="#" class="btn btn-info">Comprar</a>
+                  </div>
+                </div>
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="colageno.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 class="card-title fs-4">Card title</h5>
+                    <p class="card-text">X6 sobres</p>
+                    <a href="#" class="btn btn-info">Comprar</a>
+                  </div>
+                </div><div class="card">
+                <div class="image-wrapper">
+                  <img src="lua.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 class="card-title fs-4">Card title</h5>
+                    <p class="card-text">X6 sobres</p>
+                    <a href="#" class="btn btn-info">Comprar</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="femi.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 class="card-title fs-4">Card title</h5>
+                    <p class="card-text">X6 sobres</p>
+                    <a href="#" class="btn btn-info">Comprar</a>
+                  </div>
+                </div>
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="soflavona.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 class="card-title fs-4">Card title</h5>
+                    <p class="card-text">X6 sobres</p>
+                    <a href="#" class="btn btn-info">Comprar</a>
+                  </div>
+                </div><div class="card">
+                <div class="image-wrapper">
+                  <img src="omega.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 class="card-title fs-4">Card title</h5>
+                    <p class="card-text">X6 sobres</p>
+                    <a href="#" class="btn btn-info">Comprar</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
 
         </div>
-        <a href="#" class="cta">
-            <span>Click me</span>
+
+    </section>
+
+      <div class="Comprar">
+
+      <div class="click">
+        <a href="https://wa.me/3124011961?text=Hola me interesa el producto ..., deseo mas informacion porfavor." class="cta"
+          target="_blank"
+        >
+            <span>Comprar</span>
             <svg width="13px" height="10px" viewBox="0 0 13 10">
               <path d="M1,5 L11,5"></path>
               <polyline points="8 1 12 5 8 9"></polyline>
             </svg>
         </a>
-    </section>
+      </div>
+      </div>
 
-    <footer>
-        <div class="footer">
-            <p>&copy; Drogueria Economed Fharma 2022</p>
-        </div>
+
+    <footer class="pie-pagina" id="footer">
+      <div class="grupo-1">
+        
+          <div class="box1">
+            <div class="wrapper_button">
+              <a href="https://www.google.com/maps/dir//'2.9273883,-75.2733172'/@2.9272701,-75.3434146,12z/data=!4m6!4m5!1m0!1m3!2m2!1d-75.2733172!2d2.9273883"
+               class="ubicacion" role="button"
+               target="_blank"
+               >Ubicacion</a>
+            </div>
+            <p><b>Calle 4b #22a-30
+              Neiva, Huila
+              Colombia</b></p>
+
+          </div>
+          <div class="wrapper_siguenos">
+            <div class="box">
+                <p class="fs-4">
+                  Síguenos
+                </p>
+              <div class="box2">
+              <a href="https://www.facebook.com/people/Economedfharma/100086922858507/?paipv=0&eav=AfZR5sjsqF7_V9-FvbPAgxSq7FJZAZMOZBXAUinA9FLUXhz8urbiQtLmv5gnRci68AE&_rdr" class="fa fa-facebook"
+              target="_blank"
+               ></a>
+              <a href="https://wa.me/3124011961" class="fa fa-whatsapp"
+              target="_blank"  
+              ></a>
+              <a href="#" class="fa fa-instagram"
+              target="_blank"
+              ></a>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="grupo-2">
+        <small>&copy; 2023 <b>Drogueria Economed Fharma</b> - Todos los Derechos Reservados. </small>
+      </div>
     </footer>
 
-
+<script  src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="https://kit.fontawesome.com/4535deecd5.js" crossorigin="Steve"></script>
+<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
 </body>
 
 </html>
