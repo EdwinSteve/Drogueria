@@ -77,7 +77,6 @@
         }
 
         .container{
-            display: flex;
             height: 90vh;
         }
         .container_produc{
@@ -113,6 +112,23 @@
           height: 1.5rem;
         }
 
+        @media screen and (max-width: 576px){
+        
+        #imagen-targeta{
+          height: 15vh;
+        }
+
+     }
+
+     @media screen and (max-width: 668px){
+
+      .texto{
+        display: none;
+      }
+
+      }
+
+
         @media screen and (min-width: 568px) {
 
         .card {
@@ -137,10 +153,11 @@
 
 
 
-        @media screen and (max-width: 567px) {
+        @media screen and (max-width: 568px) {
+
 
           .img {
-            width: 150px;
+            width: 200px;
         }
 
           .card:not(:first-child){
@@ -258,8 +275,25 @@
     grid-gap: 30px;
     padding: 5vw;
   }
-
 }
+
+@media screen and (max-width: 800px){
+  
+}
+#targetica{
+  position: absolute;
+  top: 23%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#targetica2{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 .box {
   float:right;
@@ -298,6 +332,18 @@
     float:right;
   }
 
+  .filtro{
+    display: none;
+  }
+
+  .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom-right-radius: 0px;
+  } 
+
+
     </style>
     <title>Economed Fharma</title>
 </head>
@@ -314,7 +360,7 @@
 
                     <div class="me-auto p-2">
 
-                                <img class="img p-2 rounded-5  " src="img-dro.png" alt="Logo" >
+                                <img class="img p-2 rounded-5  " src="/img/img-dro.png" alt="Logo" >
 
                     </div>
 
@@ -328,7 +374,7 @@
                                 <a class="nav-link" href="#product">Productos</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="#">Pedidos</a>
+                                <a class="nav-link" href="#pedidos">Pedidos</a>
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link" href="#footer">Contactanos</a>
@@ -338,16 +384,14 @@
                                   Categorias
                                 </a>
                                 <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">Gripe</a></li>
-                                  <li><a class="dropdown-item" href="#">Bebe</a></li>
                                   <li><hr class="dropdown-divider"></li>
-                                  <li><a class="dropdown-item" href="#">Todas</a></li>
+                                  <li><a class="dropdown-item" href="#product">Todas</a></li>
                                 </ul>
                               </li>
                         <div/>
                                 <form class="d-flex" role="search">
-                                <input class="form-control me-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
-                                <button class="btn btn-outline-info" type="submit">Buscar </button>
+                                <input id="buscador" class="form-control me-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
+                                <a class="btn btn-outline-info" href="#product" >Buscar </a>
                                 </form>
 
                     </nav>
@@ -363,10 +407,41 @@
 
                     <header class="header header-light bg-blue">
                         
-                        <div class="container" id="home">
-                            <p class="navbar navbar-light bg-light">Drogueria Economed Fharma</p>
+                        <div class="container" style=" position: relative;" id="home">
 
+                          <div id="targetica" style="padding-top:5vh;">
+                         <div id="targetahe" class="card mb-3 border-info border-opacity-25" style="width: 60vw; max-height: 648px;">
+                          <div class="row g-0">
+                            <div class="col-sm-4">
+                              <img src="./img/farmacia.png" id="imagen-targeta" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-sm-8">
+                              <div class="card-body">
+                                <h5 class="card-title">Vision economed fharma</h5>
+                                <p class="texto card-text">Ser una empresa en continuo crecimiento profesional para la satisfacción de nuestros clientes, orientandonos a una atención personalizada 
+                                y en continua búsqueda de los productos que mejor se adecuen a sus necesidades ofreciendo la mejor calidad, bienestar y servicio.</p>
+                              </div>
+                            </div>
+                          </div>
+                         </div>
+                          </div>
+                          <div id="targetica2" style="padding-top:5vh;">
+                          <div id="targetahe" class="card mb-3 border-info border-opacity-25 ocultar" style="width: 60vw;">
+                            <div class="row g-0">
+                              <div class="col-sm-4">
+                                <img src="./img/mision.png" id="imagen-targeta" class="img-fluid rounded-start" alt="...">
+                              </div>
+                              <div class="col-sm-8">
+                                <div class="card-body">
+                                  <h5 class="card-title">Misión economed fharma</h5>
+                                  <p class="texto card-text">Satisfacer los requerimientos de nuestros clientes mediante la comercialización de productos farmacéuticos, de tocador y populares, 
+                                  garantizando la calidad, los cuales han sido adquiridos y/o manufacturados dentro del territorio nacional para su fácil acceso.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
+
                     </header>
 
                 </div>
@@ -384,32 +459,38 @@
               <div class="cards-wrapper">
                 <div class="card">
                   <div class="image-wrapper">
-                    <img src="Alka-Seltzer.png" class="card-img-top" alt="...">
+                    <img src="/img/Alka-Seltzer.png" class="card-img-top" alt="...">
                   </div>
                   <div class="card-body">
-                    <h5 class="card-title fs-4">Alka-Seltzer</h5>
+                    <h5 id="producto" class="producto card-title fs-4">Alka-Seltzer</h5>
                     <p class="card-text">X14 tabletas</p>
-                    <a href="#" class="btn btn-info">Comprar</a>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Alka-Seltzer, deseo mas informacion porfavor." class="btn btn-info" 
+                    target="_blank"
+                    >Comprar</a>
                   </div>
                 </div>
                 <div class="card">
                 <div class="image-wrapper">
-                  <img src="Bonfiest.jpg" class="card-img-top" alt="...">
+                  <img src="/img/Bonfiest.jpg" class="card-img-top" alt="...">
                 </div>
                   <div class="card-body">
-                    <h5 class="card-title fs-4">Bonfiest Plus</h5>
+                    <h5 id="producto" class="producto card-title fs-4">Bonfiest Plus</h5>
                     <p class="card-text">X6 sobres</p>
-                    <a href="#" class="btn btn-info">Comprar</a>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Bonfiest Plus, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
                   </div>
                 </div>
                 <div class="card">
                 <div class="image-wrapper">
-                  <img src="calcin_forte.jpg" class="card-img-top" alt="...">
+                  <img src="/img/calcin_forte.jpg" class="card-img-top" alt="...">
                 </div>
                   <div class="card-body">
-                    <h5 class="card-title fs-4">Calcin forte</h5>
+                    <h5 id="producto" class="producto card-title fs-4">Calcin forte</h5>
                     <p class="card-text">X30 tabletas</p>
-                    <a href="#" class="btn btn-info">Comprar</a>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Calcin Forte, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
                   </div>
                 </div>
 
@@ -420,31 +501,37 @@
 
                 <div class="card">
                 <div class="image-wrapper">
-                  <img src="calcio.jpg" class="card-img-top" alt="...">
+                  <img src="/img/calcio.jpg" class="card-img-top" alt="...">
                 </div>
                   <div class="card-body">
-                    <h5 class="card-title fs-4">Card title</h5>
-                    <p class="card-text">X6 sobres</p>
-                    <a href="#" class="btn btn-info">Comprar</a>
+                    <h5 id="producto" class="producto card-title fs-4">Calcio</h5>
+                    <p class="card-text">X30 capsulas blandas</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Calcio, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
                   </div>
                 </div>
                 <div class="card">
                 <div class="image-wrapper">
-                  <img src="colageno.png" class="card-img-top" alt="...">
+                  <img src="/img/colageno.png" class="card-img-top" alt="...">
                 </div>
                   <div class="card-body">
-                    <h5 class="card-title fs-4">Card title</h5>
-                    <p class="card-text">X6 sobres</p>
-                    <a href="#" class="btn btn-info">Comprar</a>
+                    <h5 id="producto" class="producto card-title fs-4">Colageno hidrolizado</h5>
+                    <p class="card-text">X12 sobres</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Colageno Hidrolizado, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
                   </div>
                 </div><div class="card">
                 <div class="image-wrapper">
-                  <img src="lua.jpg" class="card-img-top" alt="...">
+                  <img src="/img/lua.jpg" class="card-img-top" alt="...">
                 </div>
                   <div class="card-body">
-                    <h5 class="card-title fs-4">Card title</h5>
-                    <p class="card-text">X6 sobres</p>
-                    <a href="#" class="btn btn-info">Comprar</a>
+                    <h5 id="producto" class="producto card-title fs-4">Sal de frutas LUA</h5>
+                    <p class="card-text">X8 sobres</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Sal de frutas LUA, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
                   </div>
                 </div>
 
@@ -455,36 +542,794 @@
 
                 <div class="card">
                 <div class="image-wrapper">
-                  <img src="femi.jpg" class="card-img-top" alt="...">
+                  <img src="/img/femi.jpg" class="card-img-top" alt="...">
                 </div>
                   <div class="card-body">
-                    <h5 class="card-title fs-4">Card title</h5>
-                    <p class="card-text">X6 sobres</p>
-                    <a href="#" class="btn btn-info">Comprar</a>
+                    <h5 id="producto" class="producto card-title fs-4">Femivid</h5>
+                    <p class="card-text">X30 tabletas</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Femivid, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
                   </div>
                 </div>
                 <div class="card">
                 <div class="image-wrapper">
-                  <img src="soflavona.jpg" class="card-img-top" alt="...">
+                  <img src="/img/soflavona.jpg" class="card-img-top" alt="...">
                 </div>
                   <div class="card-body">
-                    <h5 class="card-title fs-4">Card title</h5>
-                    <p class="card-text">X6 sobres</p>
-                    <a href="#" class="btn btn-info">Comprar</a>
+                    <h5 id="producto" class="producto card-title fs-4">Isoflavona</h5>
+                    <p class="card-text">X100 tabletas</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Isoflavona, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
                   </div>
                 </div><div class="card">
                 <div class="image-wrapper">
-                  <img src="omega.jpg" class="card-img-top" alt="...">
+                  <img src="/img/omega.jpg" class="card-img-top" alt="...">
                 </div>
                   <div class="card-body">
-                    <h5 class="card-title fs-4">Card title</h5>
-                    <p class="card-text">X6 sobres</p>
-                    <a href="#" class="btn btn-info">Comprar</a>
+                    <h5 id="producto" class="producto card-title fs-4">Omega 3</h5>
+                    <p class="card-text">X60 capsulas blandas</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Omega 3, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
                   </div>
                 </div>
 
               </div>
             </div>
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/manking.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Manking H</h5>
+                    <p class="card-text">X30 tabletas</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Manking H, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/vitafer.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Vitafer-l</h5>
+                    <p class="card-text">X500 ml</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Vitafer-l, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div><div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/Vitaminae.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Vitamina E</h5>
+                    <p class="card-text">X50 capsulas blandas</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Vitamina E, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/zarzaparrilla.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Zarzaparrilla</h5>
+                    <p class="card-text">X360 ml</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Zarzaparrilla, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/actipen.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Actipen</h5>
+                    <p class="card-text">X500 ml</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Actipen, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div><div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/hidrolageno.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Hidrolágeno Marino</h5>
+                    <p class="card-text">X500 ml</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Hidrolágeno Marino, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/vitflex.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Vitflex</h5>
+                    <p class="card-text">X60 tabletas</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Vitflex, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/comag.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Comag-D</h5>
+                    <p class="card-text">X60 tabletas</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Comag D, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div><div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/vitafrancesa.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Vita Francesa</h5>
+                    <p class="card-text">X10 unidades</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Vita Francesa, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/Dayamineral.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Dayamineral</h5>
+                    <p class="card-text">X240 ml</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Dayamineral, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/megakids.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Mega Kids</h5>
+                    <p class="card-text">X360 ml</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Mega Kids, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div><div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/Wellfless.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Wellfless</h5>
+                    <p class="card-text">X250 ml</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Wellfless, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/Maxifort.png" style="height: 100vw;" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Maxifort</h5>
+                    <p class="card-text">X500 ml</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Maxifort, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/Chancapiedra.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Ch4ncapiedr4</h5>
+                    <p class="card-text">X360 ml</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Ch4ncapiedr4, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div><div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/epadil.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">E-padil</h5>
+                    <p class="card-text">X360 ml</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto E-padil, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/Col-nclin.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Col-Nclin</h5>
+                    <p class="card-text">X450 gr</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Col-Nclin, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/fitoartil.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Fito artril</h5>
+                    <p class="card-text">X30 capsulas</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Fito artril, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div><div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/kadein.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Kadein</h5>
+                    <p class="card-text">X60 capsulas</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Kadein, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/antaxg.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Antax Grande</h5>
+                    <p class="card-text">X360 ml</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Antax x360ml, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/antax.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Antax Pequeño</h5>
+                    <p class="card-text">X170 ml</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Antax x170ml, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div><div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/urovital.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Urovital</h5>
+                    <p class="card-text">X60 capsulas</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Vita Francesa, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/hepatodren.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Hepatodren</h5>
+                    <p class="card-text">X60 capsulas</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Hepatodren, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/kola.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Kola Granulada</h5>
+                    <p class="card-text">X380 gr</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Kola Granulada, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div><div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/emulsion1.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Emulsion de Scott sabor tropical</h5>
+                    <p class="card-text">X180 ml</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Emulsion de Scott x180ml, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/emulsion.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Emulsion de Scott sabor cereza</h5>
+                    <p class="card-text">X360 ml</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Emulsion de Scott x360 ml, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/COMPLEJO B.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Complejo B</h5>
+                    <p class="card-text">X30 capsulas blandas</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Complejo B, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div><div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/Biotina.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Biotina</h5>
+                    <p class="card-text">X60 capsulas</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Biotina, ¿en que presentacion tiene? deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/B-COMPLEX.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">B-Complex</h5>
+                    <p class="card-text">X30 capsulas</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto B-Complex, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/bio.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Biotina</h5>
+                    <p class="card-text">X30 capsulas blandas</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Biotina capsulas blandas, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div><div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/Colageno.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Colageno</h5>
+                    <p class="card-text">X700 gr</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Colageno x700gr, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/maxigold.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Maxi Gold</h5>
+                    <p class="card-text">X700 gr</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Maxi Gold, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/glucerna.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Glucerna</h5>
+                    <p class="card-text">X900 gr</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Glucerna, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div><div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/ensure.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Ensure Anvanced</h5>
+                    <p class="card-text">X200 ml</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Ensure Advanced, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/bluvid.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Bluvid Max</h5>
+                    <p class="card-text">X400 gr</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Bluvid Max, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/protensure.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Protensure</h5>
+                    <p class="card-text">X400 gr</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Protensure, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div><div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/pequeñin.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Oferta pañales pequeñin</h5>
+                    <p class="card-text">X30 pañales + 10 toallitas gratis</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa la oferta de pañales pequeñin, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/electrolit.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Electrolit</h5>
+                    <p class="card-text">X625 ml</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Electrolit, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/pedialite.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Pedialite</h5>
+                    <p class="card-text">X500 ml</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Pedialite, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div><div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/SOLHIDREX.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Solhidrex</h5>
+                    <p class="card-text">X30 sobres</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Solhidrex, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/aspirina.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Aspirina Efervecente</h5>
+                    <p class="card-text">X12 tabletas</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Apirina Efervecente, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/pepsamar.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Pepsamar</h5>
+                    <p class="card-text">X100 tabletas masticables</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Pepsamar, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div><div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/gastrofast.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Gastrofast</h5>
+                    <p class="card-text">X10 sachets</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Gastrofast, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/gaviscon.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Gaviscon</h5>
+                    <p class="card-text">X10 ml</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Gaviscon, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/vaporub.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">VapoRub</h5>
+                    <p class="card-text">X50 gr</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto VapoRub, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div><div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/alvirub.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">AlivRub</h5>
+                    <p class="card-text">X50 gr</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto AlivRub, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/asobroncol.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Asobroncol</h5>
+                    <p class="card-text">X120 ml</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Asobroncol, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/noxpirinniños.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Noxpirin Junior</h5>
+                    <p class="card-text">X60 ml</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Noxpirin Junior, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div><div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/mieltertosniños.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Mieltertos Niños</h5>
+                    <p class="card-text">X180 ml</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Mieltertos Niños, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/VITALMIEL.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Vital Miel</h5>
+                    <p class="card-text">X120 ml</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Vital Miel, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/ACTIVOX.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Activox</h5>
+                    <p class="card-text">X4 pastillas masticables</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Pedialite, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div><div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/SOLHIDREX.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Solhidrex</h5>
+                    <p class="card-text">X30 sobres</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Solhidrex, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/electrolit.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Electrolit</h5>
+                    <p class="card-text">X625 ml</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Electrolit, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                <div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/pedialite.png" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Pedialite</h5>
+                    <p class="card-text">X500 ml</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Pedialite, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div><div class="card">
+                <div class="image-wrapper">
+                  <img src="/img/SOLHIDREX.jpg" class="card-img-top" alt="...">
+                </div>
+                  <div class="card-body">
+                    <h5 id="producto" class="producto card-title fs-4">Solhidrex</h5>
+                    <p class="card-text">X30 sobres</p>
+                    <a href="https://wa.me/3124011961?text=Hola me interesa el producto Solhidrex, deseo mas informacion porfavor." class="btn btn-info"
+                    target="_blank"
+                    >Comprar</a>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -501,7 +1346,7 @@
 
     </section>
 
-      <div class="Comprar">
+      <div id="pedidos" class="Comprar">
 
       <div class="click">
         <a href="https://wa.me/3124011961?text=Hola me interesa el producto ..., deseo mas informacion porfavor." class="cta"
@@ -555,7 +1400,7 @@
         <small>&copy; 2023 <b>Drogueria Economed Fharma</b> - Todos los Derechos Reservados. </small>
       </div>
     </footer>
-
+<script src="Drogueria.js"></script>
 <script  src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 <script src="https://kit.fontawesome.com/4535deecd5.js" crossorigin="Steve"></script>
 <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
